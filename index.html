@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+    <title>QR Code Generator</title>
+</head>
+<body>
+
+    <header>
+        <h1>QR Code Generator</h1>    
+    </header>
+    
+    <div class="main">
+
+        <div class="main-top">
+
+            <div class="main-top-info">
+                <div class="main-top-text">
+                    <p>Add an URL, get QR Code and allow others use and share it easily.</p>
+                </div>
+                <div class="main-top-select">
+                    <form id="form">
+                        <input type="text" name="url" id="url" placeholder="Type an URL" required>
+                        <select name="size" id="size">
+                            <option value="100">100x100</option>
+                            <option value="200">200x200</option>
+                            <option selected value="300">300x300</option>
+                            <option value="400">400x400</option>
+                            <option value="500">500x500</option>
+                            <option value="600">600x600</option>
+                            <option value="700">700x700</option>
+                        </select>
+                        <button type="submit" id="submit">Get QR Code</button>
+                        <button type="reset" id="reset">Reset</button>
+                    </form>                    
+                </div>
+            </div>
+
+            <div class="main-top-img">
+                <img src="qrcode-img.png" alt="" srcset="">
+            </div>
+
+        </div>
+
+        <div class="main-bottom" id="result">
+
+            <!-- Spinner -->
+            <div id="spinner"></div>   
+
+            <div id="qrcode"></div>
+
+            <span class="sr-only" id="loading">Loading...</span>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

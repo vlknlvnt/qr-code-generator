@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color: #CAE9FF;
+}
+
+header {
+    background-color: #1B4965;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.main-top {
+    display: flex;
+}
+
+.main-top-text, .main-top-select {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, select, button {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: 1px #5fa8d3 solid;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #5fa8d3;
+    color: white;
+}
+
+.main-top-text > p {
+    font-size: 1.5rem;
+}
+
+.main-top-img {
+    text-align: center;
+}
+
+.main-top-img > img {
+    width: 100%;
+    object-fit: cover;
+    padding: 2rem;
+}
+
+.main-bottom {
+    text-align: center;
+}
+
+#spinner {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1B4965;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+#loading {
+    padding-block: 1.5rem;
+}
+
+#qrcode > img {
+    margin: auto;
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        padding-inline: 1rem;
+    }
+
+    .main-top {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+        padding-block: 2rem;
+    }    
+    
+    .main {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .main-top {
+        flex-direction: row;
+        gap: 3.5rem;
+    }
+
+    .main-top > div {
+        flex: 1 1 100%;
+    }
+
+    input, select, button {
+        width: 60%;
+    }
+}
